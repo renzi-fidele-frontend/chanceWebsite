@@ -6,7 +6,7 @@ import styles from "./Header.module.css";
 const Header = () => {
    return (
       <Container>
-         <div className="d-flex align-items-center justify-content-between w-100">
+         <div className="d-flex align-items-center justify-content-between w-100 py-3">
             <Navbar.Brand as={Link} to="/" className="fw-medium">
                <Image id={styles.logo} src={logo} alt="Logo do site" />
             </Navbar.Brand>
@@ -14,6 +14,8 @@ const Header = () => {
             <Button variant="success">Como comprar?</Button>
 
             {/* TODO: Adicionar funcionalidade de alternar o tema entre dark/light */}
+
+            {/* TODO: Adicionar página de Faqs */}
          </div>
       </Container>
    );

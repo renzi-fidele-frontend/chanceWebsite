@@ -1,5 +1,6 @@
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import styles from "./Home.module.css";
+import Slides from "../../components/Slides";
 
 const Home = () => {
    // TODO: Adicionar estrutura basica da seção do carousel de banners
@@ -8,6 +9,14 @@ const Home = () => {
    // TODO: Adicionar funcionalidade de filtragem dos videos
    // TODO: Adicionar estrutura basica do ambiente fullstack
    // TODO: Adicionar funcionalidade de gerenciamento do conteudo do site pelo Admin(Chance)
-   return <Container>Home</Container>;
+   return (
+      <Container fluid>
+         <Row>
+            <Col>
+               <Slides />
+            </Col>
+         </Row>
+      </Container>
+   );
 };
 export default Home;
