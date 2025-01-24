@@ -1,34 +1,40 @@
 import { Carousel, Image } from "react-bootstrap";
+import styles from "./Slides.module.css";
+
+const items = [
+   {
+      titulo: "Prazer Sob Medida",
+      foto: "https://iili.io/2sRaIwB.jpg",
+      descricao: "Explore conteúdos exclusivos e feitos para você. Descubra um universo de desejo com total privacidade e segurança.",
+   },
+   {
+      titulo: "Conteúdo Que Te Faz Ir Além",
+      foto: "https://iili.io/2sRaTZP.jpg",
+      descricao: "Material premium, 100% original e irresistível. Mergulhe na experiência única que você merece.",
+   },
+   {
+      titulo: "Seu Desejo, Nossa Inspiração",
+      foto: "https://iili.io/2sRaAn1.jpg",
+      descricao: "Criações exclusivas e personalizadas, entregues com discrição e alta qualidade. Dê o próximo passo no mundo do prazer.",
+   },
+];
 
 const Slides = () => {
    return (
-      <Carousel draggable={false}>
-         {/* Item 1 */}
-         <Carousel.Item>
-            <Image src="https://placehold.co/1900x700" fluid />
-            <Carousel.Caption>
-               <h3>First slide label</h3>
-               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-         </Carousel.Item>
+      <Carousel touch draggable={false}>
+         {items.map(({ descricao, foto, titulo }, k) => (
+            <Carousel.Item key={k}>
+               <div className="position-relative">
+                  <Image src={foto} fluid />
+                  <div id={styles.fundo}></div>
+               </div>
 
-         {/* Item 2 */}
-         <Carousel.Item>
-            <Image src="https://placehold.co/1900x700" fluid />
-            <Carousel.Caption>
-               <h3>First slide label</h3>
-               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-         </Carousel.Item>
-
-         {/* Item 3 */}
-         <Carousel.Item>
-            <Image src="https://placehold.co/1900x700" fluid />
-            <Carousel.Caption>
-               <h3>First slide label</h3>
-               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-         </Carousel.Item>
+               <Carousel.Caption className="text-light mb-5">
+                  <h3 id={styles.tit}>{titulo}</h3>
+                  <p className="fs-5">{descricao}</p>
+               </Carousel.Caption>
+            </Carousel.Item>
+         ))}
       </Carousel>
    );
 };

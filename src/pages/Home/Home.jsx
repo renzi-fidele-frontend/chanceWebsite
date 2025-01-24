@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import styles from "./Home.module.css";
 import Slides from "../../components/Slides";
 
@@ -11,11 +11,7 @@ const Home = () => {
    // TODO: Adicionar funcionalidade de gerenciamento do conteudo do site pelo Admin(Chance)
    return (
       <Container fluid>
-         <Row>
-            <Col>
-               <Slides />
-            </Col>
-         </Row>
+         <Slides />
       </Container>
    );
 };
