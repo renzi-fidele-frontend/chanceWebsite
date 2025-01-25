@@ -11,7 +11,7 @@ import "./App.css";
 createRoot(document.getElementById("root")).render(
    <StrictMode>
       <BrowserRouter>
-         <div className="App d-flex flex-column  text-bg-dark">
+         <div className="App d-flex flex-column text-bg-dark">
             <Header />
 
             <Routes>
