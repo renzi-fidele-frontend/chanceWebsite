@@ -1,4 +1,4 @@
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Badge, Button, Card, Col, Container, Row } from "react-bootstrap";
 import Slides from "../../components/Slides";
 
 const data = [
@@ -95,9 +95,9 @@ const Home = () => {
                {/* Vídeos */}
                <div className="px-5 mx-5">
                   <Row className="justify-content-center g-4 px-5 mx-auto mt-4">
-                     {data.map(({ descricao, foto, titulo, download, link }, k) => (
+                     {data.map(({ descricao, foto, titulo, download, link, preco }, k) => (
                         <Col md={3} key={k}>
-                           <Card className="h-100 text-bg-dark border border-light">
+                           <Card className="h-100 text-bg-dark border border-light position-relative">
                               <Card.Img variant="top" src={foto} />
                               <Card.Body>
                                  <Card.Title>{titulo}</Card.Title>
@@ -116,6 +116,7 @@ const Home = () => {
                                     </Button>
                                  </div>
                               </Card.Footer>
+                              <Badge className="position-absolute end-0 top-0 bg-success">{(Math.round(preco * 100) / 100).toFixed(2)} $</Badge>
                            </Card>
                         </Col>
                      ))}
