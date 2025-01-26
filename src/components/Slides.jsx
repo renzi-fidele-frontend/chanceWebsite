@@ -2,7 +2,6 @@ import { Carousel, Image } from "react-bootstrap";
 import styles from "./Slides.module.css";
 import "yet-another-react-lightbox/styles.css";
 
-
 const items = [
    {
       titulo: "Prazer Sob Medida",
@@ -27,13 +26,13 @@ const Slides = () => {
          {items.map(({ descricao, foto, titulo }, k) => (
             <Carousel.Item key={k}>
                <div className="position-relative">
-                  <Image src={foto} fluid />
+                  <Image id={styles.foto} src={foto} fluid />
                   <div id={styles.fundo}></div>
                </div>
 
-               <Carousel.Caption className="text-light mb-5">
+               <Carousel.Caption className="text-light mb-lg-4 mb-xxl-5">
                   <h3 id={styles.tit}>{titulo}</h3>
-                  <p className="fs-5">{descricao}</p>
+                  <p id={styles.texto}>{descricao}</p>
                </Carousel.Caption>
             </Carousel.Item>
          ))}

@@ -3,6 +3,14 @@
    text-shadow: 0 0 0 6px black;
 }
 
+#texto {
+   font-size: 22px;
+}
+
+#foto {
+   min-height: 300px !important;
+}
+
 #fundo {
    background: rgb(0, 0, 0);
    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 45%);
@@ -12,6 +20,42 @@
    bottom: 0;
    right: 0;
    left: 0;
-   
    position: absolute;
+}
+
+@media screen and (max-width: 1300px) {
+   #tit {
+      font-size: 3rem;
+   }
+
+   #texto {
+      font-size: 19px;
+   }
+}
+
+@media screen and (max-width: 1050px) {
+   #tit {
+      font-size: 2.6rem;
+   }
+
+   #texto {
+      font-size: 16px;
+   }
+}
+
+@media screen and (max-width: 1050px) {
+   #tit {
+      font-size: 2rem;
+   }
+}
+
+@media screen and (max-width: 600px) {
+  
+   #tit {
+      font-size: 1.5rem;
+   }
+
+   #texto {
+      font-size: 14px;
+   }
 }

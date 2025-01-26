@@ -1,4 +1,4 @@
-import { Badge, Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import Slides from "../../components/Slides";
 import CardVideo from "../../components/CardVideo";
 
@@ -30,6 +30,18 @@ const data = [
       download: 360,
       descricao: "Full HD,  mais de 500 videos, 300 fotos, 100Gb",
       link: "https://www.paypal.com/ncp/payment/F3UVFYZCDFNGS",
+      previas: [
+         "https://iili.io/2LfIQTJ.jpg",
+         "https://iili.io/2LfItQR.jpg",
+         "https://iili.io/2LfIspa.jpg",
+         "https://iili.io/2LfIZhv.jpg",
+         "https://iili.io/2LfIbBp.jpg",
+         "https://iili.io/2LfIp4I.jpg",
+         "https://iili.io/2LfTHYX.jpg",
+         "https://iili.io/2LfT92t.jpg",
+         "https://iili.io/2LfTJvn.jpg",
+         "https://iili.io/2LfTdps.jpg",
+      ],
    },
    {
       titulo: "Sophie Rain",
@@ -38,6 +50,18 @@ const data = [
       download: 869,
       descricao: "Garota linda, 365 arquivos, 85 videos full Hd, 387 fotos, 87GB",
       link: "https://www.paypal.com/ncp/payment/WT68S63GFCD4A",
+      previas: [
+         "https://iili.io/2Lf4ZCX.jpg",
+         "https://iili.io/2Lf4sjI.jpg",
+         "https://iili.io/2Lf4iTN.jpg",
+         "https://iili.io/2Lf4LQt.jpg",
+         "https://iili.io/2Lf4D4s.jpg",
+         "https://iili.io/2Lf4m3G.jpg",
+         "https://iili.io/2Lf4paf.jpg",
+         "https://iili.io/2Lf4yv4.jpg",
+         "https://iili.io/2Lf6djS.webp",
+         "https://iili.io/2Lf62Z7.webp",
+      ],
    },
    {
       titulo: "Ivanka",
@@ -110,7 +134,15 @@ const Home = () => {
                   <Row className="justify-content-center g-4 px-5 mx-auto mt-4">
                      {data.map(({ descricao, foto, titulo, download, link, preco, previas }, k) => (
                         <Col md={3} key={k}>
-                           <CardVideo descricao={descricao} foto={foto} titulo={titulo} download={download} link={link} preco={preco} previas={previas} />
+                           <CardVideo
+                              descricao={descricao}
+                              foto={foto}
+                              titulo={titulo}
+                              download={download}
+                              link={link}
+                              preco={preco}
+                              previas={previas}
+                           />
                         </Col>
                      ))}
                   </Row>

@@ -1,13 +1,15 @@
 import { useRef, useState } from "react";
-import { Badge, Button, Card, Carousel, Image, Modal } from "react-bootstrap";
+import { Badge, Button, Card } from "react-bootstrap";
 import Lightbox from "yet-another-react-lightbox";
-import { Captions } from "yet-another-react-lightbox/plugins";
-// Plugin de caption
+import { Captions, Thumbnails } from "yet-another-react-lightbox/plugins";
+// Plugins
 import "yet-another-react-lightbox/plugins/captions.css";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 const CardVideo = ({ descricao, foto, titulo, download, link, preco, previas }) => {
    const [aberto, setAberto] = useState(false);
    const captionsRef = useRef(null);
+   const thumbnailsRef = useRef(null);
    return (
       <Card className="h-100 text-bg-dark border border-light position-relative">
          <Card.Img variant="top" src={foto} />
@@ -29,14 +31,16 @@ const CardVideo = ({ descricao, foto, titulo, download, link, preco, previas }) 
             </div>
             {/* Lightbox */}
             <Lightbox
-            className="text-center"
+               thumbnails={{ ref: thumbnailsRef }}
+               className="text-center"
                open={aberto}
                close={() => setAberto(false)}
                captions={{ ref: captionsRef }}
-               plugins={[Captions]}
+               plugins={[Captions, Thumbnails]}
                on={{
                   click: () => {
                      (captionsRef.current?.visible ? captionsRef.current?.hide : captionsRef.current?.show)?.();
+                     (thumbnailsRef.current?.visible ? thumbnailsRef.current?.hide : thumbnailsRef.current?.show)?.();
                   },
                }}
                slides={previas?.map((v, k) => {
