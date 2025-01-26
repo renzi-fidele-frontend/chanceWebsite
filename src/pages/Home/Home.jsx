@@ -1,5 +1,6 @@
 import { Badge, Button, Card, Col, Container, Row } from "react-bootstrap";
 import Slides from "../../components/Slides";
+import CardVideo from "../../components/CardVideo";
 
 const data = [
    {
@@ -9,6 +10,18 @@ const data = [
       download: 211,
       descricao: "HD video, Novo vasamento, Mais de 300 videos, 600 fotos, conteúdo quente",
       link: "https://www.paypal.com/ncp/payment/CJCTPW3J7326G",
+      previas: [
+         "https://iili.io/2LKkjQj.jpg",
+         "https://iili.io/2LKkhhb.jpg",
+         "https://iili.io/2LKkNCx.jpg",
+         "https://iili.io/2LKk5Is.jpg",
+         "https://iili.io/2LKkDvt.jpg",
+         "https://iili.io/2LKkZ3N.jpg",
+         "https://iili.io/2LKkbyX.jpg",
+         "https://iili.io/2LKkL4p.jpg",
+         "https://iili.io/2LKkpun.jpg",
+         "https://iili.io/2LKkyjs.jpg",
+      ],
    },
    {
       titulo: "Emmi Saller",
@@ -95,29 +108,9 @@ const Home = () => {
                {/* Vídeos */}
                <div className="px-5 mx-5">
                   <Row className="justify-content-center g-4 px-5 mx-auto mt-4">
-                     {data.map(({ descricao, foto, titulo, download, link, preco }, k) => (
+                     {data.map(({ descricao, foto, titulo, download, link, preco, previas }, k) => (
                         <Col md={3} key={k}>
-                           <Card className="h-100 text-bg-dark border border-light position-relative">
-                              <Card.Img variant="top" src={foto} />
-                              <Card.Body>
-                                 <Card.Title>{titulo}</Card.Title>
-                                 <Card.Text className="text-truncate text-capitalize">{descricao}</Card.Text>
-                              </Card.Body>
-                              <Card.Footer className="border-secondary d-flex justify-content-between align-items-center">
-                                 <span className="fw-semibold">
-                                    <i className="bi bi-download"></i> {download}
-                                 </span>
-                                 <div className="d-flex gap-2 justify-content-end">
-                                    <Button size="sm" as="a" target="_blank" href={link}>
-                                       <i className="bi bi-cart"></i> Comprar
-                                    </Button>
-                                    <Button size="sm" variant="outline-light">
-                                       <i className="bi bi-info-circle"></i> Ver detalhes
-                                    </Button>
-                                 </div>
-                              </Card.Footer>
-                              <Badge className="position-absolute end-0 top-0 bg-success">{(Math.round(preco * 100) / 100).toFixed(2)} $</Badge>
-                           </Card>
+                           <CardVideo descricao={descricao} foto={foto} titulo={titulo} download={download} link={link} preco={preco} previas={previas} />
                         </Col>
                      ))}
                   </Row>

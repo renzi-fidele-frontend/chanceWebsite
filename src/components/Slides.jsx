@@ -1,5 +1,7 @@
 import { Carousel, Image } from "react-bootstrap";
 import styles from "./Slides.module.css";
+import "yet-another-react-lightbox/styles.css";
+
 
 const items = [
    {
