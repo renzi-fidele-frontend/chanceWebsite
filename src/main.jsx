@@ -7,17 +7,18 @@ import Footer from "./components/Footer.jsx";
 // Libs
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import Notificacao from "./components/Notificacao.jsx";
 
 createRoot(document.getElementById("root")).render(
    <StrictMode>
       <BrowserRouter>
          <div className="App d-flex flex-column text-bg-dark">
             <Header />
-
             <Routes>
                <Route exact path="/" element={<Home />} />
             </Routes>
             <Footer />
+            <Notificacao />
          </div>
       </BrowserRouter>
    </StrictMode>
