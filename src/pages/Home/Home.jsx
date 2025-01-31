@@ -3,13 +3,11 @@ import Slides from "../../components/Slides";
 import CardVideo from "../../components/CardVideo";
 import { data } from "../../content/data";
 
-
 const Home = () => {
    // TODO: Adicionar funcionalidade de filtragem dos videos
    // TODO: Adicionar estrutura basica do ambiente fullstack
    // TODO: Adicionar funcionalidade de gerenciamento do conteudo do site pelo Admin(Chance)
 
-   // TODO: Mostrar notificação de compra do produto no intervalo de 10sec
    return (
       <Container fluid>
          <Slides />
