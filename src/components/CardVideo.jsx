@@ -5,6 +5,7 @@ import { Captions, Thumbnails } from "yet-another-react-lightbox/plugins";
 // Plugins
 import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
+import styles from "./CardVideo.module.css";
 
 const CardVideo = ({ descricao, foto, titulo, download, link, preco, previas }) => {
    const [aberto, setAberto] = useState(false);
@@ -12,8 +13,15 @@ const CardVideo = ({ descricao, foto, titulo, download, link, preco, previas }) 
    const thumbnailsRef = useRef(null);
    return (
       <Card bg={preco === 0 ? "secondary" : "black"} className={`h-100 text-bg-dark   position-relative ${preco === 0 && "border"}`}>
-         <Card.Img variant="top" src={foto} />
-         <Card.Body>
+         <div className="position-relative">
+            <Card.Img variant="top" src={foto} />
+            {preco > 0 ? (
+               <Badge className="position-absolute bottom-0 start-0 bg-danger ms-1 mb-1 border border-black ">Premium</Badge>
+            ) : (
+               <Badge className="position-absolute bottom-0 start-0 bg-success ms-1 mb-1 border border-black ">Gratuito</Badge>
+            )}
+         </div>
+         <Card.Body className="position-relative">
             <Card.Title>{titulo}</Card.Title>
             <Card.Text className="text-truncate text-capitalize">{descricao}</Card.Text>
          </Card.Body>
@@ -53,10 +61,16 @@ const CardVideo = ({ descricao, foto, titulo, download, link, preco, previas }) 
             />
          </Card.Footer>
          {preco === 0 ? (
-            <Badge className="position-absolute end-0 top-0 bg-success">-- Gratuito --</Badge>
+            <Badge id={styles.preco} className=" position-absolute end-0 top-0 bg-success">
+               0.00 $
+            </Badge>
          ) : (
-            <Badge className="position-absolute end-0 top-0 bg-danger">{(Math.round(preco * 100) / 100).toFixed(2)} $</Badge>
+            <Badge id={styles.preco} className="position-absolute end-0 top-0 bg-danger">
+               {(Math.round(preco * 100) / 100).toFixed(2)} $
+            </Badge>
          )}
+
+         {/* {preco > 0 && <img id={styles.foto} width={30} className="position-absolute start-0 top-0 ms-2 mt-2" src={diamante} />} */}
       </Card>
    );
 };
