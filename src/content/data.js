@@ -21,7 +21,7 @@ export const data = [
    {
       titulo: "Izzygreen",
       foto: "https://iili.io/2LFT5jR.jpg",
-      preco: 100,
+      preco: 55,
       download: 211,
       descricao: "HD video, Novo vasamento, Mais de 300 videos, 600 fotos, conteúdo quente",
       link: "https://www.paypal.com/ncp/payment/CJCTPW3J7326G",
@@ -104,7 +104,7 @@ export const data = [
       preco: 65,
       download: 1100,
       descricao: "Pasta exclusiva com mais de 900 video,700 fotos videos HD 1000GB",
-      link: "https://www.paypal.com/ncp/payment/QP2XHUD9R7MHG",
+      link: "https://www.paypal.com/ncp/payment/QSKERZNPGER5U",
       previas: [
          "https://iili.io/2ZJT4PS.jpg",
          "https://iili.io/2ZJTvAG.jpg",
@@ -181,10 +181,10 @@ export const data = [
    {
       titulo: "Fanbus",
       foto: "https://iili.io/2LFTguj.jpg",
-      preco: 80,
+      preco: 68,
       download: 73,
       descricao: "Pasta com mais de 900 videos, 3000 fotos 765 arquivos, mais de 15 modelos diferentes, qualidade HD, 1000GB",
-      link: "https://www.paypal.com/ncp/payment/LNKHPDR766VJU",
+      link: "https://www.paypal.com/ncp/payment/7LVJG33C4UVA8",
       previas: [
          "https://iili.io/2ZdKR8Q.jpg",
          "https://iili.io/2ZdKAcx.jpg",

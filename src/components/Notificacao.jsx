@@ -16,7 +16,7 @@ const Notificacao = () => {
       }
       setInterval(() => {
          apanharPastaAleatoria();
-      }, 30000);
+      }, 40000);
       setStart(true);
    }, []);
 
