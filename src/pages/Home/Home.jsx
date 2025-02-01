@@ -18,7 +18,7 @@ const Home = () => {
                </h2>
 
                {/* Vídeos */}
-               <div className="px-2 px-xl-5">
+               <div className="px-2 mx-xxl-4 px-xl-5">
                   <Row className="justify-content-center g-4 px-xxl-5 mx-auto mt-4">
                      {data.map(({ descricao, foto, titulo, download, link, preco, previas }, k) => (
                         <Col md={6} lg={4} xxl={3} key={k}>
