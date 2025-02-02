@@ -1,5 +1,23 @@
 {
    "header": {
       "linkText": "How to buy?"
+   },
+   "home": {
+      "slides": [
+         {
+            "titulo": "Tailored Pleasure",
+            "descricao": "Explore exclusive content designed just for you. Discover a universe of desire in total privacy and security."
+         },
+         {
+            "titulo": "Content that takes you further",
+            "descricao": "Premium material, 100% original and irresistible. Immerse yourself in the unique experience you deserve."
+         },
+         {
+            "titulo": "Your Wish, Our Inspiration",
+            "descricao": "Exclusive and personalized creations, delivered with discretion and high quality. Take the next step in the world of pleasure."
+         }
+      ],
+      "tit": "Access exclusive",
+      "subtit": "high-quality content"
    }
 }

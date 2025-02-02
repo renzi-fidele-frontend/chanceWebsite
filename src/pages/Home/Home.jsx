@@ -2,29 +2,32 @@ import { Col, Container, Row } from "react-bootstrap";
 import Slides from "../../components/Slides";
 import CardVideo from "../../components/CardVideo";
 import { data } from "../../content/data";
-
-const items = [
-   {
-      titulo: "Prazer Sob Medida",
-      foto: "https://iili.io/2sRaIwB.jpg",
-      descricao: "Explore conteúdos exclusivos e feitos para você. Descubra um universo de desejo com total privacidade e segurança.",
-   },
-   {
-      titulo: "Conteúdo Que Te Faz Ir Além",
-      foto: "https://iili.io/2sRaTZP.jpg",
-      descricao: "Material premium, 100% original e irresistível. Mergulhe na experiência única que você merece.",
-   },
-   {
-      titulo: "Seu Desejo, Nossa Inspiração",
-      foto: "https://iili.io/2sRaAn1.jpg",
-      descricao: "Criações exclusivas e personalizadas, entregues com discrição e alta qualidade. Dê o próximo passo no mundo do prazer.",
-   },
-];
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
    // TODO: Adicionar funcionalidade de filtragem dos videos
    // TODO: Adicionar estrutura basica do ambiente fullstack
    // TODO: Adicionar funcionalidade de gerenciamento do conteudo do site pelo Admin(Chance)
+   const { t } = useTranslation();
+   const { slides, tit, subtit } = t("home");
+
+   const items = [
+      {
+         titulo: slides[0].titulo,
+         foto: "https://iili.io/2sRaIwB.jpg",
+         descricao: slides[0].descricao,
+      },
+      {
+         titulo: slides[1].titulo,
+         foto: "https://iili.io/2sRaTZP.jpg",
+         descricao: slides[1].descricao,
+      },
+      {
+         titulo: slides[2].titulo,
+         foto: "https://iili.io/2sRaAn1.jpg",
+         descricao: slides[2].descricao,
+      },
+   ];
 
    return (
       <div>
@@ -33,7 +36,7 @@ const Home = () => {
             <Row>
                <Col className="text-center py-5">
                   <h2>
-                     Acesse conteúdo exclusivo de <span className="text-danger fw-bold text-decoration-underline">alta qualidade</span>
+                     {tit} <span className="text-danger fw-bold text-decoration-underline">{subtit}</span>
                   </h2>
 
                   {/* Vídeos */}
