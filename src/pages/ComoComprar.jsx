@@ -17,7 +17,7 @@ const ComoComprar = () => {
    const items = [
       {
          titulo: instrucoes[0].titulo,
-         foto: "https://iili.io/2ZkmTFt.jp",
+         foto: "https://iili.io/2ZyZaHP.jpg",
          descricao: instrucoes[0].descricao,
       },
       {
