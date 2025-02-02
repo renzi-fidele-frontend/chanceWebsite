@@ -29,3 +29,7 @@ img {
 [data-bs-theme="dark"].carousel .carousel-control-prev-icon {
    filter: none !important;
 }
+
+[data-bs-theme="dark"] .carousel .carousel-indicators [data-bs-target], [data-bs-theme="dark"].carousel .carousel-indicators [data-bs-target] {
+   background-color: white !important;
+}
