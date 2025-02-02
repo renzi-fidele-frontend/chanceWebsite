@@ -21,3 +21,11 @@ img {
    min-height: 100dvh;
    height: 100%;
 }
+
+/* Modificações no Bootstrap */
+[data-bs-theme="dark"] .carousel .carousel-control-next-icon,
+[data-bs-theme="dark"] .carousel .carousel-control-prev-icon,
+[data-bs-theme="dark"].carousel .carousel-control-next-icon,
+[data-bs-theme="dark"].carousel .carousel-control-prev-icon {
+   filter: none !important;
+}

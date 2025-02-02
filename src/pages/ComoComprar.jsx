@@ -6,6 +6,7 @@ import ft1 from "../assets/mastercard.svg";
 import ft2 from "../assets/paypal.svg";
 import ft3 from "../assets/security-code.svg";
 import ft4 from "../assets/visa.svg";
+import Acordeao from "../components/Acordeao";
 
 const items = [
    {
@@ -53,17 +54,12 @@ const ComoComprar = () => {
                   <Image src={ill} id={styles.foto} className="mb-4" />
                   <div className="text-start mb-5">
                      {perguntasErespostas.map(({ pergunta, resposta }, k) => (
-                        <Accordion key={k}>
-                           <Accordion.Item eventKey="0">
-                              <Accordion.Header>{pergunta}</Accordion.Header>
-                              <Accordion.Body>{resposta}</Accordion.Body>
-                           </Accordion.Item>
-                        </Accordion>
+                        <Acordeao pergunta={pergunta} resposta={resposta} key={k} />
                      ))}
                   </div>
                   <hr />
-                  <h2 className="mt-4 fw-bold text-center mb-5">Métodos de pagamento disponíveis</h2>
-                  <div className="d-flex justify-content-center gap-3">
+                  <h2 className="mt-5 fw-bold text-center mb-5">Métodos de pagamento disponíveis</h2>
+                  <div className="d-flex flex-wrap justify-content-center gap-3">
                      {metodosDePagamento.map((v, k) => (
                         <Image className={styles.metodoPagamento} src={v} key={k} />
                      ))}

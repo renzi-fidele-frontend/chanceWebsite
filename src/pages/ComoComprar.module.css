@@ -5,3 +5,15 @@
 .metodoPagamento {
     width: 100px;
 }
+
+@media screen and (max-width: 850px) {
+    #foto {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #foto {
+        width: 230px;
+    }
+}
