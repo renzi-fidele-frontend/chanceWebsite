@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { Toast, ToastContainer } from "react-bootstrap";
 import { data } from "../content/data";
+import { useTranslation } from "react-i18next";
 
 const Notificacao = () => {
+   const { t } = useTranslation();
+   const { compra, momento, descricao } = t("notificacao");
    const [mostrar, setMostrar] = useState(false);
    const [pastaSelecionada, setPastaSelecionada] = useState(null);
    const [start, setStart] = useState(false);
@@ -24,11 +27,11 @@ const Notificacao = () => {
       <ToastContainer position="bottom-end" className="position-fixed">
          <Toast bg="danger" show={mostrar} className="mb-4 me-sm-5 mb-sm-5" onClose={() => setMostrar(false)}>
             <Toast.Header>
-               <strong className="me-auto">Compra realizada!</strong>
-               <small>Agora mesmo</small>
+               <strong className="me-auto">{compra}</strong>
+               <small>{momento}</small>
             </Toast.Header>
             <Toast.Body>
-               Alguém comprou a pasta:{" "}
+               {descricao}{" "}
                <a target="_blank" href={pastaSelecionada?.link} role="button" className="text-warning fw-semibold fst-italic">
                   {pastaSelecionada?.titulo}
                </a>

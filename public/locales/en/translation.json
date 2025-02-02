@@ -26,5 +26,10 @@
       "access": "Access",
       "free": "Free gift",
       "premium": "Premium"
+   },
+   "notificacao": {
+    "compra": "Purchase completed!",
+    "momento": "Right now",
+    "descricao": "Someone bought the folder:"
    }
 }
