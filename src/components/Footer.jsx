@@ -1,6 +1,7 @@
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import logo from "../assets/logo.png";
 import styles from "./Footer.module.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
    return (
@@ -13,9 +14,11 @@ const Footer = () => {
             <Col className="mt-3 mt-md-0 text-center text-md-end">
                <hr className="d-md-none" />
                <h3 className="mb-3 mb-md-2">Dúvidas online</h3>
-               <Button style={{ backgroundColor: "#229ED9" }}>
-                  <i className="bi bi-telegram me-2"></i> Contatar no Telegram
-               </Button>
+               <a target="_blank" href="https://t.me/+RcEFSoRa5LwyMWM0">
+                  <Button style={{ backgroundColor: "#229ED9" }}>
+                     <i className="bi bi-telegram me-2"></i> Contatar no Telegram
+                  </Button>
+               </a>
             </Col>
          </Row>
       </Container>
