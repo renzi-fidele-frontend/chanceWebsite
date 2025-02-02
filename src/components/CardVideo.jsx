@@ -6,8 +6,11 @@ import { Captions, Thumbnails } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import styles from "./CardVideo.module.css";
+import { useTranslation } from "react-i18next";
 
 const CardVideo = ({ descricao, foto, titulo, download, link, preco, previas }) => {
+   const { t } = useTranslation();
+   const { view, buy, access, premium, free } = t("videoCard");
    const [aberto, setAberto] = useState(false);
    const captionsRef = useRef(null);
    const thumbnailsRef = useRef(null);
@@ -16,9 +19,9 @@ const CardVideo = ({ descricao, foto, titulo, download, link, preco, previas }) 
          <div className="position-relative">
             <Card.Img variant="top" src={foto} />
             {preco > 0 ? (
-               <Badge className="position-absolute bottom-0 start-0 bg-danger ms-1 mb-1 border border-black ">Premium</Badge>
+               <Badge className="position-absolute bottom-0 start-0 bg-danger ms-1 mb-1 border border-black ">{premium}</Badge>
             ) : (
-               <Badge className="position-absolute bottom-0 start-0 bg-success ms-1 mb-1 border border-black ">Gratuito</Badge>
+               <Badge className="position-absolute bottom-0 start-0 bg-success ms-1 mb-1 border border-black ">{free}</Badge>
             )}
          </div>
          <Card.Body className="position-relative">
@@ -31,10 +34,10 @@ const CardVideo = ({ descricao, foto, titulo, download, link, preco, previas }) 
             </span>
             <div className="d-flex gap-2 justify-content-end">
                <Button variant={preco === 0 ? "success" : "primary"} size="sm" as="a" target="_blank" href={link}>
-                  <i className={`bi bi-${preco === 0 ? "unlock" : "cart"}`}></i> {preco === 0 ? "Acessar" : "Comprar"}
+                  <i className={`bi bi-${preco === 0 ? "unlock" : "cart"}`}></i> {preco === 0 ? access : buy}
                </Button>
                <Button onClick={() => setAberto(true)} size="sm" variant="outline-light">
-                  <i className="bi bi-eye"></i> Ver conteúdo
+                  <i className="bi bi-eye"></i> {view}
                </Button>
             </div>
             {/* Lightbox */}
@@ -69,8 +72,6 @@ const CardVideo = ({ descricao, foto, titulo, download, link, preco, previas }) 
                {(Math.round(preco * 100) / 100).toFixed(2)} $
             </Badge>
          )}
-
-         {/* {preco > 0 && <img id={styles.foto} width={30} className="position-absolute start-0 top-0 ms-2 mt-2" src={diamante} />} */}
       </Card>
    );
 };

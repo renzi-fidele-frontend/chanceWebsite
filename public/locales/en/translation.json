@@ -19,5 +19,12 @@
       ],
       "tit": "Access exclusive",
       "subtit": "high-quality content"
+   },
+   "videoCard": {
+      "view": "View content",
+      "buy": "Buy",
+      "access": "Access",
+      "free": "Free gift",
+      "premium": "Premium"
    }
 }

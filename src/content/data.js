@@ -4,7 +4,7 @@ export const data = [
       foto: "https://iili.io/2ZOEI14.jpg",
       preco: 0,
       download: 3189,
-      descricao: "Full HD, 76 videos, pretty girl, 35GB, 447 fotos",
+      descricao: "Full HD, 76 videos, pretty girl, 35GB, 447 photos",
       link: "https://mega.nz/folder/xL1XwRCQ#wfJGueQhT4pObCC7xk2EWA",
       previas: [
          "https://iili.io/2ZOM3Nt.jpg",
@@ -23,7 +23,7 @@ export const data = [
       foto: "https://iili.io/2LFT5jR.jpg",
       preco: 55,
       download: 211,
-      descricao: "HD video, Novo vasamento, Mais de 300 videos, 600 fotos, conteúdo quente",
+      descricao: "HD video, New leaked, More than 300 videos, 600 photos, hot content",
       link: "https://www.paypal.com/ncp/payment/CJCTPW3J7326G",
       previas: [
          "https://iili.io/2LKkjQj.jpg",
@@ -43,7 +43,7 @@ export const data = [
       foto: "https://iili.io/2LFTXj4.jpg",
       preco: 35,
       download: 360,
-      descricao: "Full HD,  mais de 500 videos, 300 fotos, 100Gb",
+      descricao: "Full HD, over 500 videos, 300 photos, 100Gb",
       link: "https://www.paypal.com/ncp/payment/F3UVFYZCDFNGS",
       previas: [
          "https://iili.io/2LfIQTJ.jpg",
@@ -63,7 +63,7 @@ export const data = [
       foto: "https://iili.io/2LFTRTv.jpg",
       preco: 40,
       download: 869,
-      descricao: "Garota linda, 365 arquivos, 85 videos full Hd, 387 fotos, 87GB",
+      descricao: "Beautiful girl, 365 files, 85 full Hd videos, 387 photos, 87GB",
       link: "https://www.paypal.com/ncp/payment/WT68S63GFCD4A",
       previas: [
          "https://iili.io/2Lf4ZCX.jpg",
@@ -83,7 +83,7 @@ export const data = [
       foto: "https://iili.io/2LFTwn2.jpg",
       preco: 25,
       download: 411,
-      descricao: "HD video, 85 arquivos, 59 videos, 76 fotos 35GB",
+      descricao: "HD video, 85 files, 59 videos, 76 photos 35GB",
       link: "https://www.paypal.com/ncp/payment/QP2XHUD9R7MHG",
       previas: [
          "https://iili.io/2ZJxrMP.jpg",
@@ -103,7 +103,7 @@ export const data = [
       foto: "https://iili.io/2LFTNGS.jpg",
       preco: 65,
       download: 1100,
-      descricao: "Pasta exclusiva com mais de 900 video,700 fotos videos HD 1000GB",
+      descricao: "Exclusive folder with over 900 videos, 700 photos and 1000GB HD videos",
       link: "https://www.paypal.com/ncp/payment/QSKERZNPGER5U",
       previas: [
          "https://iili.io/2ZJT4PS.jpg",
@@ -123,7 +123,7 @@ export const data = [
       foto: "https://iili.io/2LFT13X.jpg",
       preco: 50,
       download: 799,
-      descricao: "sexy Girl, pasta rara, 3035 arquivos, 265 videos, 2967 fotos 780GB",
+      descricao: "Sexy Girl, rare paste, 3035 files, 265 videos, 2967 photos 780GB",
       link: "https://www.paypal.com/ncp/payment/ACW64GKGC7MKU",
       previas: [
          "https://iili.io/2ZJ5Hf2.jpg",
@@ -143,7 +143,7 @@ export const data = [
       foto: "https://iili.io/2LFT7Qp.jpg",
       preco: 30,
       download: 1230,
-      descricao: "Sexy girl, pasta rara, mais de 200 videos, 500 fotos, 398 arquivos, 50GB",
+      descricao: "Sexy girl, rare folder, over 200 videos, 500 photos, 398 files, 50GB",
       link: "https://www.paypal.com/ncp/payment/323H9T8EGYB2N",
       previas: [
          "https://iili.io/2ZJ7r3N.jpg",
@@ -163,7 +163,7 @@ export const data = [
       foto: "https://iili.io/2LFTWuf.jpg",
       preco: 15,
       download: 360,
-      descricao: "Videos altamente excitatorios, 100 arquivos, 70 videos, 65 fotos, 35Gb",
+      descricao: "Highly exciting videos, 100 files, 70 videos, 65 photos, 35Gb",
       link: "https://www.paypal.com/ncp/payment/XUCZDP4TNFGYA",
       previas: [
          "https://iili.io/2ZdHLoG.jpg",
@@ -183,7 +183,7 @@ export const data = [
       foto: "https://iili.io/2LFTguj.jpg",
       preco: 68,
       download: 73,
-      descricao: "Pasta com mais de 900 videos, 3000 fotos 765 arquivos, mais de 15 modelos diferentes, qualidade HD, 1000GB",
+      descricao: "Folder with more than 900 videos, 3000 photos 765 files, more than 15 different models, HD quality, 1000GB",
       link: "https://www.paypal.com/ncp/payment/7LVJG33C4UVA8",
       previas: [
          "https://iili.io/2ZdKR8Q.jpg",
@@ -203,7 +203,7 @@ export const data = [
       foto: "https://iili.io/2ZNPb14.jpg",
       preco: 33,
       download: 53,
-      descricao: "Incest folder, 50GB, 200 videos, 342 fotos, sexy girl",
+      descricao: "Incest folder, 50GB, 200 videos, 342 photos, sexy girl",
       link: "https://www.paypal.com/ncp/payment/6P7EJGE9WNDZE",
       previas: [
          "https://iili.io/2ZNE6R1.jpg",
@@ -223,7 +223,7 @@ export const data = [
       foto: "https://iili.io/2ZNplaa.jpg",
       preco: 30,
       download: 117,
-      descricao: "Full HD, 70GB folder, 345 videos, 477 fotos, hot folder",
+      descricao: "Full HD, 70GB folder, 345 videos, 477 photos, hot folder",
       link: "https://www.paypal.com/ncp/payment/2MMECPCYMG8WW",
       previas: [
          "https://iili.io/2ZNbZ0u.jpg",
