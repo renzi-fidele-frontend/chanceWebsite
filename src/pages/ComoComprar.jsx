@@ -1,5 +1,11 @@
-import { Accordion, Col, Container, Row } from "react-bootstrap";
+import { Accordion, Col, Container, Image, Row } from "react-bootstrap";
 import Slides from "../components/Slides";
+import ill from "../assets/ill.png";
+import styles from "./ComoComprar.module.css";
+import ft1 from "../assets/mastercard.svg";
+import ft2 from "../assets/paypal.svg";
+import ft3 from "../assets/security-code.svg";
+import ft4 from "../assets/visa.svg";
 
 const items = [
    {
@@ -34,15 +40,18 @@ const perguntasErespostas = [
    },
 ];
 
+const metodosDePagamento = [ft1, ft2, ft3, ft4];
+
 const ComoComprar = () => {
    return (
       <div>
          <Slides items={items} />
-         <Container className="mt-5 mb-4">
+         <Container className="mt-5 mb-5">
             <Row>
-               <Col>
+               <Col className="text-center">
                   <h2 className="fw-bold text-center mb-4">Perguntas Frequentes</h2>
-                  <div>
+                  <Image src={ill} id={styles.foto} className="mb-4" />
+                  <div className="text-start mb-5">
                      {perguntasErespostas.map(({ pergunta, resposta }, k) => (
                         <Accordion key={k}>
                            <Accordion.Item eventKey="0">
@@ -52,9 +61,15 @@ const ComoComprar = () => {
                         </Accordion>
                      ))}
                   </div>
+                  <hr />
+                  <h2 className="mt-4 fw-bold text-center mb-5">Métodos de pagamento disponíveis</h2>
+                  <div className="d-flex justify-content-center gap-3">
+                     {metodosDePagamento.map((v, k) => (
+                        <Image className={styles.metodoPagamento} src={v} key={k} />
+                     ))}
+                  </div>
                </Col>
             </Row>
-            {/* TODO: Mostrar logo das opções de pagamento aqui ou no rodapé */}
          </Container>
       </div>
    );
