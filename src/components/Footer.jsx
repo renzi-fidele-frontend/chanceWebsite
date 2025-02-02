@@ -5,14 +5,15 @@ import styles from "./Footer.module.css";
 const Footer = () => {
    return (
       <Container className="py-4 px-5 border border-top mt-5 bg-black">
-         <Row>
-            <Col>
+         <Row className="mb-4 mb-md-0">
+            <Col className="text-center text-md-start" md={6}>
                <Image id={styles.logo} src={logo} alt="Logo do site" />
                <p className="mb-0 mt-2">Explore conteúdos exclusivos e feitos para você.</p>
             </Col>
-            <Col className="text-end">
-               <h3>Dúvidas online</h3>
-               <Button style={{backgroundColor: "#229ED9"}}>
+            <Col className="mt-3 mt-md-0 text-center text-md-end">
+               <hr className="d-md-none" />
+               <h3 className="mb-3 mb-md-2">Dúvidas online</h3>
+               <Button style={{ backgroundColor: "#229ED9" }}>
                   <i className="bi bi-telegram me-2"></i> Contatar no Telegram
                </Button>
             </Col>
