@@ -22,7 +22,7 @@ const Notificacao = () => {
 
    return (
       <ToastContainer position="bottom-end" className="position-fixed">
-         <Toast bg="danger" show={mostrar} className="me-5 mb-5" onClose={() => setMostrar(false)}>
+         <Toast bg="danger" show={mostrar} className="mb-4 me-sm-5 mb-sm-5" onClose={() => setMostrar(false)}>
             <Toast.Header>
                <strong className="me-auto">Compra realizada!</strong>
                <small>Agora mesmo</small>
