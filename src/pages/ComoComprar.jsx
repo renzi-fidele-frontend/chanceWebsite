@@ -5,12 +5,14 @@ const items = [
    {
       titulo: "1 - Selecione a pasta desejada",
       foto: "https://iili.io/2ZkmTFt.jp",
-      descricao: "Explore conteúdos exclusivos e feitos para você. Descubra um universo de desejo com total privacidade e segurança.",
+      descricao:
+         "Navegue pela nossa coleção e escolha a pasta de conteúdo que deseja adquirir. Certifique-se de verificar as prévias e descrições para selecionar exatamente o que procura.",
    },
    {
       titulo: "2 - Efectuar o pagamento no paypal",
       foto: "https://iili.io/2ZkmzPI.jp",
-      descricao: "Material premium, 100% original e irresistível. Mergulhe na experiência única que você merece.",
+      descricao:
+         "Após escolher sua pasta, realize o pagamento com segurança via PayPal. Assim que a transação for confirmada, o acesso ao conteúdo será liberado imediatamente.",
    },
 ];
 
