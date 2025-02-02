@@ -3,6 +3,24 @@ import Slides from "../../components/Slides";
 import CardVideo from "../../components/CardVideo";
 import { data } from "../../content/data";
 
+const items = [
+   {
+      titulo: "Prazer Sob Medida",
+      foto: "https://iili.io/2sRaIwB.jpg",
+      descricao: "Explore conteúdos exclusivos e feitos para você. Descubra um universo de desejo com total privacidade e segurança.",
+   },
+   {
+      titulo: "Conteúdo Que Te Faz Ir Além",
+      foto: "https://iili.io/2sRaTZP.jpg",
+      descricao: "Material premium, 100% original e irresistível. Mergulhe na experiência única que você merece.",
+   },
+   {
+      titulo: "Seu Desejo, Nossa Inspiração",
+      foto: "https://iili.io/2sRaAn1.jpg",
+      descricao: "Criações exclusivas e personalizadas, entregues com discrição e alta qualidade. Dê o próximo passo no mundo do prazer.",
+   },
+];
+
 const Home = () => {
    // TODO: Adicionar funcionalidade de filtragem dos videos
    // TODO: Adicionar estrutura basica do ambiente fullstack
@@ -10,7 +28,7 @@ const Home = () => {
 
    return (
       <div>
-         <Slides />
+         <Slides items={items} />
          <Container fluid>
             <Row>
                <Col className="text-center py-5">

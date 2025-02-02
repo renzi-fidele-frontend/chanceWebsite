@@ -11,7 +11,9 @@ const Header = () => {
                <Image id={styles.logo} src={logo} alt="Logo do site" />
             </Navbar.Brand>
 
-            <Button variant="success">Como comprar?</Button>
+            <Button as={Link} to="/how_to_buy" variant="success">
+               Como comprar?
+            </Button>
 
             {/* TODO: Adicionar funcionalidade de alternar o tema entre dark/light */}
 
