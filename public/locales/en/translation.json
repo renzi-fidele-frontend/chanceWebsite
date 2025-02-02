@@ -28,8 +28,13 @@
       "premium": "Premium"
    },
    "notificacao": {
-    "compra": "Purchase completed!",
-    "momento": "Right now",
-    "descricao": "Someone bought the folder:"
+      "compra": "Purchase completed!",
+      "momento": "Right now",
+      "descricao": "Someone bought the folder:"
+   },
+   "footer": {
+      "p": "Explore exclusive content selected just for you.",
+      "contact": "Contact on Telegram",
+      "duvidas": "Online support"
    }
 }
