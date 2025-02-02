@@ -36,5 +36,33 @@
       "p": "Explore exclusive content selected just for you.",
       "contact": "Contact on Telegram",
       "duvidas": "Online support"
+   },
+   "howToBuy": {
+      "instrucoes": [
+         {
+            "titulo": "1 - Select the desired folder",
+            "descricao": "Browse our collection and choose the content folder you want to buy. Be sure to check the previews and descriptions to select exactly what you're looking for."
+         },
+         {
+            "titulo": "2 - Pay on paypal",
+            "descricao": "After choosing your folder, pay securely via PayPal or Visa. As soon as the transaction is confirmed, access to the content will be released immediately."
+         }
+      ],
+      "faqsTit": "Perguntas Frequentes",
+      "perguntasErespostas": [
+         {
+            "pergunta": "What should I do if the link to a folder stops working?",
+            "resposta": "If the link to access the folder is not working, please contact us via Telegram as soon as possible. Our team will check the problem and provide a new link if necessary."
+         },
+         {
+            "pergunta": "How long does it take to access the folder after payment?",
+            "resposta": "Access is granted immediately after payment is confirmed. If you have any problems, please contact us via Telegram for support."
+         },
+         {
+            "pergunta": "What payment methods are available?",
+            "resposta": "We currently accept payments exclusively via PayPal and VISA. If you need more information about the payment process, please contact us."
+         }
+      ],
+      "methods": "Payment methods available"
    }
 }

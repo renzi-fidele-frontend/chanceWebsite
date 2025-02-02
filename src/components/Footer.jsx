@@ -18,7 +18,8 @@ const Footer = () => {
                <h3 className="mb-3 mb-md-2">{duvidas}</h3>
                <a target="_blank" href="https://t.me/+RcEFSoRa5LwyMWM0">
                   <Button style={{ backgroundColor: "#229ED9" }}>
-                     <i className="bi bi-telegram me-2"></i>{contact}
+                     <i className="bi bi-telegram me-2"></i>
+                     {contact}
                   </Button>
                </a>
             </Col>
