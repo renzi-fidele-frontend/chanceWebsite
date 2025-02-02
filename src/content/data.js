@@ -121,7 +121,7 @@ export const data = [
    {
       titulo: "Kazumi Squirt",
       foto: "https://iili.io/2LFT13X.jpg",
-      preco: 100,
+      preco: 50,
       download: 799,
       descricao: "sexy Girl, pasta rara, 3035 arquivos, 265 videos, 2967 fotos 780GB",
       link: "https://www.paypal.com/ncp/payment/ACW64GKGC7MKU",
@@ -139,9 +139,9 @@ export const data = [
       ],
    },
    {
-      titulo: "Brookeblond: Sexy girl",
+      titulo: "Brookeblond: Sexy girls",
       foto: "https://iili.io/2LFT7Qp.jpg",
-      preco: 35,
+      preco: 30,
       download: 1230,
       descricao: "Sexy girl, pasta rara, mais de 200 videos, 500 fotos, 398 arquivos, 50GB",
       link: "https://www.paypal.com/ncp/payment/323H9T8EGYB2N",
