@@ -5,6 +5,7 @@ import styles from "./Header.module.css";
 import { useTranslation } from "react-i18next";
 import { ContextValue } from "../context/Provider";
 import i18n from "../i18n/i18n";
+import { useEffect } from "react";
 
 const Header = () => {
    const { estado, dispatch } = ContextValue();
@@ -14,9 +15,15 @@ const Header = () => {
    i18n.on("languageChanged", (idiomaNovo) => {
       dispatch({ type: "setIdioma", payload: idiomaNovo });
    });
+
    function mudarIdioma(idiomaNovo) {
       i18n.changeLanguage(idiomaNovo);
    }
+
+   // Ao se chegar na página detectando o idioma
+   useEffect(() => {
+      dispatch({ type: "setIdioma", payload: i18n.language });
+   }, []);
 
    return (
       <Container fluid className="bg-black">

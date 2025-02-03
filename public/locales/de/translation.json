@@ -1,0 +1,68 @@
+{
+   "header": {
+      "linkText": "Wie kann ich kaufen?"
+   },
+   "home": {
+      "slides": [
+         {
+            "titulo": "Maßgeschneidertes Vergnügen",
+            "descricao": "Entdecken Sie exklusive Inhalte, die nur für Sie bestimmt sind. Entdecken Sie ein Universum der Lust in absoluter Privatsphäre und Sicherheit."
+         },
+         {
+            "titulo": "Inhalte, die Sie weiterbringen",
+            "descricao": "Hochwertiges Material, 100% originell und unwiderstehlich. Tauchen Sie ein in das einzigartige Erlebnis, das Sie verdienen."
+         },
+         {
+            "titulo": "Ihr Wunsch, unsere Inspiration",
+            "descricao": "Exklusive und personalisierte Kreationen, die mit Diskretion und hoher Qualität geliefert werden. Machen Sie den nächsten Schritt in die Welt des Vergnügens."
+         }
+      ],
+      "tit": "Zugang zu exklusiven ",
+      "subtit": "hochwertigen Inhalten"
+   },
+   "videoCard": {
+      "view": "Inhalt anzeigen",
+      "buy": "Kaufen",
+      "access": "Zugang",
+      "free": "Kostenloses Geschenk",
+      "premium": "Prämie"
+   },
+   "notificacao": {
+      "compra": "Kauf abgeschlossen!",
+      "momento": "Gerade jetzt",
+      "descricao": "Jemand hat die Mappe gekauft:"
+   },
+   "footer": {
+      "p": "Entdecken Sie exklusive Inhalte, die nur für Sie ausgewählt wurden.",
+      "contact": "Kontakt auf Telegram",
+      "duvidas": "Online-Unterstützung"
+   },
+   "howToBuy": {
+      "instrucoes": [
+         {
+            "titulo": "1 - Wählen Sie den gewünschten Ordner",
+            "descricao": "Stöbern Sie in unserer Sammlung und wählen Sie die gewünschte Inhaltsmappe aus, die Sie kaufen möchten. Achten Sie auf die Vorschauen und Beschreibungen, um genau das auszuwählen, wonach Sie suchen."
+         },
+         {
+            "titulo": "2 - Bezahlen mit Paypal",
+            "descricao": "Nachdem Sie Ihren Ordner ausgewählt haben, können Sie sicher per PayPal oder Visa bezahlen. Sobald die Transaktion bestätigt ist, wird der Zugriff auf den Inhalt sofort freigegeben."
+         }
+      ],
+      "faqsTit": "Häufig gestellte Fragen",
+      "perguntasErespostas": [
+         {
+            "pergunta": "Was soll ich tun, wenn der Link zu einem Ordner nicht mehr funktioniert?",
+            "resposta": "Wenn der Link zum Zugriff auf den Ordner nicht funktioniert, kontaktieren Sie uns bitte so schnell wie möglich über Telegram. Unser Team wird das Problem prüfen und ggf. einen neuen Link bereitstellen."
+         },
+         {
+            "pergunta": "Wie lange dauert es, bis ich nach der Zahlung Zugriff auf den Ordner habe?",
+            "resposta": "Der Zugang wird sofort nach Bestätigung der Zahlung gewährt. Wenn Sie irgendwelche Probleme haben, kontaktieren Sie uns bitte über Telegram für Unterstützung."
+         },
+         {
+            "pergunta": "Welche Zahlungsmöglichkeiten gibt es?",
+            "resposta": "Wir akzeptieren derzeit ausschließlich Zahlungen über PayPal und VISA. Wenn Sie weitere Informationen über den Zahlungsprozess benötigen, kontaktieren Sie uns bitte."
+         }
+      ],
+      "methods": "Verfügbare Zahlungsarten"
+   }
+}
