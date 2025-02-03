@@ -8,16 +8,18 @@ import ft3 from "../assets/security-code.svg";
 import ft4 from "../assets/visa.svg";
 import Acordeao from "../components/Acordeao";
 import { useTranslation } from "react-i18next";
+import { ContextValue } from "../context/Provider";
 
 const metodosDePagamento = [ft1, ft2, ft3, ft4];
 
 const ComoComprar = () => {
+   const { estado } = ContextValue();
    const { t } = useTranslation();
    const { instrucoes, perguntasErespostas, faqsTit, methods } = t("howToBuy");
    const items = [
       {
          titulo: instrucoes[0].titulo,
-         foto: "https://iili.io/2ZyZaHP.jpg",
+         foto: estado.idioma === "en" ? "https://iili.io/2ZyZaHP.jpg" : "https://iili.io/2t9gJLB.jpg",
          descricao: instrucoes[0].descricao,
       },
       {
