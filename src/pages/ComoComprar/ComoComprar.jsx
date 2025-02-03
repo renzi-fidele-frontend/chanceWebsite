@@ -1,14 +1,17 @@
-import { Col, Container, Image, Row } from "react-bootstrap";
-import Slides from "../components/Slides";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
+import Row from "react-bootstrap/Row";
+import Slides from "../../components/Slides";
 import ill from "../assets/ill.png";
 import styles from "./ComoComprar.module.css";
 import ft1 from "../assets/mastercard.svg";
 import ft2 from "../assets/paypal.svg";
 import ft3 from "../assets/security-code.svg";
 import ft4 from "../assets/visa.svg";
-import Acordeao from "../components/Acordeao";
+import Acordeao from "../../components/Acordeao";
 import { useTranslation } from "react-i18next";
-import { ContextValue } from "../context/Provider";
+import { ContextValue } from "../../context/Provider";
 
 const metodosDePagamento = [ft1, ft2, ft3, ft4];
 

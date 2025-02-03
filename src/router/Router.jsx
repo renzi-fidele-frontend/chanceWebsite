@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Notificacao from "../components/Notificacao";
 import Home from "../pages/Home/Home";
-import ComoComprar from "../pages/ComoComprar";
+import ComoComprar from "../pages/ComoComprar/ComoComprar";
 
 const Router = () => {
    return (

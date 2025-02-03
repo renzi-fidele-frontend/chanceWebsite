@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
-import { Badge, Button, Card } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
+import Badge from "react-bootstrap/Badge";
+import Button from "react-bootstrap/Button";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions, Thumbnails } from "yet-another-react-lightbox/plugins";
 // Plugins

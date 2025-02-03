@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Toast, ToastContainer } from "react-bootstrap";
+import Toast from "react-bootstrap/Toast";
+import ToastContainer from "react-bootstrap/ToastContainer";
 import { data } from "../content/data";
 import { useTranslation } from "react-i18next";
 

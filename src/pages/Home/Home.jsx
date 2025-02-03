@@ -1,4 +1,6 @@
-import { Col, Container, Row } from "react-bootstrap";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 import Slides from "../../components/Slides";
 import CardVideo from "../../components/CardVideo";
 import { data } from "../../content/data";
@@ -36,7 +38,8 @@ const Home = () => {
             <Row>
                <Col className="text-center py-5">
                   <h2>
-                     {tit} <span className="text-danger fw-bold text-decoration-underline">{subtit}</span>
+                     {tit}
+                     <span className="text-danger fw-bold text-decoration-underline"> {subtit}</span>
                   </h2>
 
                   {/* Vídeos */}

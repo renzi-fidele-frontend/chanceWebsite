@@ -1,4 +1,4 @@
-import { Accordion } from "react-bootstrap";
+import Accordion from "react-bootstrap/Accordion";
 
 const Acordeao = ({ pergunta, resposta, key }) => {
    return (

@@ -1,4 +1,8 @@
-import { Button, Container, Dropdown, Image, Navbar } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Dropdown from "react-bootstrap/Dropdown";
+import Image from "react-bootstrap/Image";
+import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import styles from "./Header.module.css";
