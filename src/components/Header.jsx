@@ -32,10 +32,11 @@ const Header = () => {
                <Image id={styles.logo} src={logo} alt="Logo do site" />
             </Navbar.Brand>
 
-            <div className="d-flex gap-3 align-items-center">
+            <div className="d-flex gap-2 gap-sm-3 align-items-center">
                <Button as={Link} to="/how_to_buy" variant="success">
                   {linkText}
                </Button>
+               {/* BTN de mudar idioma */}
                <Dropdown>
                   <Dropdown.Toggle variant="outline-light">
                      <i className="bi bi-globe"></i>
