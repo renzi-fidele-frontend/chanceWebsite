@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useContext, useReducer } from "react";
 
 const initialState = { idioma: "en" };
 const reducer = (state, action) => {
@@ -10,11 +10,14 @@ const reducer = (state, action) => {
    }
 };
 
+const Context = createContext();
+
 const Provider = ({ children }) => {
-   const Context = createContext();
    const [estado, dispatch] = useReducer(reducer, initialState);
 
    return <Context.Provider value={{ estado, dispatch }}>{children}</Context.Provider>;
 };
+
+export const ContextValue = () => useContext(Context);
 
 export default Provider;

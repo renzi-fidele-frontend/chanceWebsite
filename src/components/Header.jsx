@@ -1,10 +1,12 @@
-import { Button, Container, Image, Navbar } from "react-bootstrap";
+import { Button, Container, Dropdown, Image, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import styles from "./Header.module.css";
 import { useTranslation } from "react-i18next";
+import { ContextValue } from "../context/Provider";
 
 const Header = () => {
+   const { estado, dispatch } = ContextValue();
    const { t } = useTranslation();
    const { linkText } = t("header");
    return (
@@ -14,9 +16,21 @@ const Header = () => {
                <Image id={styles.logo} src={logo} alt="Logo do site" />
             </Navbar.Brand>
 
-            <Button as={Link} to="/how_to_buy" variant="success">
-               {linkText}
-            </Button>
+            <div className="d-flex gap-3 align-items-center">
+               <Button as={Link} to="/how_to_buy" variant="success">
+                  {linkText}
+               </Button>
+               <Dropdown>
+                  <Dropdown.Toggle variant="outline-light">
+                     <i className="bi bi-globe"></i>
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                     <Dropdown.Item active={estado.idioma === "en"}>🇬🇧 English</Dropdown.Item>
+                     <Dropdown.Item active={estado.idioma === "de"}>🇩🇪 Deutsch</Dropdown.Item>
+                  </Dropdown.Menu>
+               </Dropdown>
+            </div>
 
             {/* TODO: Adicionar funcionalidade de alternar o tema entre dark/light */}
          </div>
