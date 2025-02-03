@@ -19,8 +19,6 @@ const Header = () => {
             </Button>
 
             {/* TODO: Adicionar funcionalidade de alternar o tema entre dark/light */}
-
-            {/* TODO: Adicionar página de Faqs */}
          </div>
       </Container>
    );
