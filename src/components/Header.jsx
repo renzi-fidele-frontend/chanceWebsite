@@ -27,7 +27,7 @@ const Header = () => {
 
    return (
       <Container fluid className="bg-black">
-         <div className="container d-flex align-items-center justify-content-between w-100 py-3">
+         <div className="container px-0 d-flex align-items-center justify-content-between w-100 py-3">
             <Navbar.Brand as={Link} to="/" className="fw-medium">
                <Image id={styles.logo} src={logo} alt="Logo do site" />
             </Navbar.Brand>
