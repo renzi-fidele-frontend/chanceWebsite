@@ -1,21 +1,20 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
-import Lightbox from "yet-another-react-lightbox";
-import { Captions, Thumbnails } from "yet-another-react-lightbox/plugins";
+
 // Plugins
 import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import styles from "./CardVideo.module.css";
 import { useTranslation } from "react-i18next";
+import LightBox from "../LightBox";
 
 const CardVideo = ({ descricao, foto, titulo, download, link, preco, previas }) => {
    const { t } = useTranslation();
    const { view, buy, access, premium, free } = t("videoCard");
    const [aberto, setAberto] = useState(false);
-   const captionsRef = useRef(null);
-   const thumbnailsRef = useRef(null);
+
    return (
       <Card bg={preco === 0 ? "secondary" : "black"} className={`h-100 text-bg-dark   position-relative ${preco === 0 && "border"}`}>
          <div className="position-relative">
@@ -43,27 +42,7 @@ const CardVideo = ({ descricao, foto, titulo, download, link, preco, previas }) 
                </Button>
             </div>
             {/* Lightbox */}
-            <Lightbox
-               thumbnails={{ ref: thumbnailsRef }}
-               className="text-center"
-               open={aberto}
-               close={() => setAberto(false)}
-               captions={{ ref: captionsRef }}
-               plugins={[Captions, Thumbnails]}
-               on={{
-                  click: () => {
-                     (captionsRef.current?.visible ? captionsRef.current?.hide : captionsRef.current?.show)?.();
-                     (thumbnailsRef.current?.visible ? thumbnailsRef.current?.hide : thumbnailsRef.current?.show)?.();
-                  },
-               }}
-               slides={previas?.map((v, k) => {
-                  return {
-                     src: previas[k],
-                     title: titulo,
-                     description: descricao,
-                  };
-               })}
-            />
+            <LightBox fotos={previas} descricao={descricao} titulo={titulo} aberto={aberto} onClose={() => setAberto(false)}  />
          </Card.Footer>
          {preco === 0 ? (
             <Badge id={styles.preco} className=" position-absolute end-0 top-0 bg-success">

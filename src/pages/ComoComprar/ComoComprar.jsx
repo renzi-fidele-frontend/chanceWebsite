@@ -2,7 +2,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
-import Slides from "../../components/Slides";
+import Slides from "../../components/Slides/Slides";
 import styles from "./ComoComprar.module.css";
 import ill from "../../assets/ill.png";
 import ft1 from "../../assets/mastercard.svg";

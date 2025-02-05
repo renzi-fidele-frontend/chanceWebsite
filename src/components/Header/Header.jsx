@@ -4,11 +4,11 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Image from "react-bootstrap/Image";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import styles from "./Header.module.css";
 import { useTranslation } from "react-i18next";
-import { ContextValue } from "../context/Provider";
-import i18n from "../i18n/i18n";
+import { ContextValue } from "../../context/Provider";
+import i18n from "../../i18n/i18n";
 import { useEffect } from "react";
 
 const Header = () => {

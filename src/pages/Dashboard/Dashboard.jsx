@@ -1,12 +1,13 @@
 import { Button, Col, Container, Image, Row, Table } from "react-bootstrap";
 import { data } from "../../content/data";
+import styles from "./Dashboard.module.css"
 
 const Dashboard = () => {
    return (
-      <Container>
+      <Container id={styles.ct}>
          <Row>
             <Col className="text-center py-5">
-               <h2>Gerenciador do conteúdo do site</h2>
+               <h2 className="mb-4">Gerenciador do conteúdo do site</h2>
                <hr />
 
                <Table striped className="mt-4 text-start">
@@ -26,7 +27,7 @@ const Dashboard = () => {
                            <td>
                               <div className="d-flex align-items-center gap-2">
                                  <Image width={40} thumbnail src={foto} />
-                                 <h4 className="text-capitalize mb-0 text-truncate">{titulo}</h4>
+                                 <h5 className="text-capitalize mb-0 text-truncate">{titulo}</h5>
                               </div>
                            </td>
                            <td>
@@ -35,8 +36,7 @@ const Dashboard = () => {
                            <td>{(Math.round(preco * 100) / 100).toFixed(2)} $</td>
                            <td>
                               <div className="d-flex gap-2">
-                                 <Button size="sm">Ver</Button>
-                                 <Button size="sm" variant="outline-secondary">
+                                 <Button size="sm" variant="outline-light">
                                     Editar
                                  </Button>
                                  <Button size="sm" variant="outline-danger">

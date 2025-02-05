@@ -1,8 +1,8 @@
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Slides from "../../components/Slides";
-import CardVideo from "../../components/CardVideo";
+import Slides from "../../components/Slides/Slides";
+import CardVideo from "../../components/CardVideo/CardVideo";
 import { data } from "../../content/data";
 import { useTranslation } from "react-i18next";
 

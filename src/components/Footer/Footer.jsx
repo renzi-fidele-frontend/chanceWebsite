@@ -3,7 +3,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import styles from "./Footer.module.css";
 import { useTranslation } from "react-i18next";
 
