@@ -1,6 +1,7 @@
 import { Button, Col, Container, Image, Row, Table } from "react-bootstrap";
 import { data } from "../../content/data";
-import styles from "./Dashboard.module.css"
+import styles from "./Dashboard.module.css";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
    return (
@@ -21,22 +22,22 @@ const Dashboard = () => {
                      </tr>
                   </thead>
                   <tbody>
-                     {data.map(({ titulo, download, preco, foto }, k) => (
+                     {data.map((v, k) => (
                         <tr key={k}>
                            <td>{k + 1}</td>
                            <td>
                               <div className="d-flex align-items-center gap-2">
-                                 <Image width={40} thumbnail src={foto} />
-                                 <h5 className="text-capitalize mb-0 text-truncate">{titulo}</h5>
+                                 <Image width={40} thumbnail src={v.foto} />
+                                 <h5 className="text-capitalize mb-0 text-truncate">{v.titulo}</h5>
                               </div>
                            </td>
                            <td>
-                              {download} <i className="bi bi-download"></i>
+                              {v.download} <i className="bi bi-download"></i>
                            </td>
-                           <td>{(Math.round(preco * 100) / 100).toFixed(2)} $</td>
+                           <td>{(Math.round(v.preco * 100) / 100).toFixed(2)} $</td>
                            <td>
                               <div className="d-flex gap-2">
-                                 <Button size="sm" variant="outline-light">
+                                 <Button as={Link} to={`editar`} state={v} size="sm" variant="outline-light">
                                     Editar
                                  </Button>
                                  <Button size="sm" variant="outline-danger">
