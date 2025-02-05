@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Notificacao from "../components/Notificacao";
 import Home from "../pages/Home/Home";
 import ComoComprar from "../pages/ComoComprar/ComoComprar";
+import Dashboard from "../pages/Dashboard/Dashboard";
 
 const Router = () => {
    return (
@@ -13,6 +14,7 @@ const Router = () => {
             <Routes>
                <Route exact path="/" element={<Home />} />
                <Route path="/how_to_buy" element={<ComoComprar />} />
+               <Route path="/dashboard" element={<Dashboard />} />
             </Routes>
             <Footer />
             <Notificacao />
