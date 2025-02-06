@@ -23,7 +23,7 @@ const Dashboard = () => {
                   </thead>
                   <tbody>
                      {data.map((v, k) => (
-                        <tr key={k}>
+                        <tr className={styles.tr} key={k}>
                            <td>{k + 1}</td>
                            <td>
                               <div className="d-flex align-items-center gap-2">

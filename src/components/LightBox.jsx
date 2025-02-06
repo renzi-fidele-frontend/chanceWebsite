@@ -24,7 +24,7 @@ const LightBox = ({ fotos = [], titulo, descricao, aberto, onClose }) => {
             return {
                src: fotos[k],
                title: titulo,
-               descricao,
+               description: descricao,
             };
          })}
       />
