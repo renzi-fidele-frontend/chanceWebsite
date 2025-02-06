@@ -1,8 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
-import { Alert, Button, Col, Container, Form, Image, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import { useRef } from "react";
 import styles from "./Dashboard.module.css";
 import Previa from "../../components/Previa/Previa";
+import { renderizarPrevia } from "../../utils/renderizarPrevia";
 
 const Editar = () => {
    const pasta = useLocation().state;
@@ -13,24 +14,25 @@ const Editar = () => {
    const descricaoRef = useRef();
    const downloadsRef = useRef();
    const previasRef = useRef();
+   const fotoDestaqueInput = useRef();
+
+   const fotoDestaque = useRef();
 
    function editarPasta(e) {
       e.preventDefault();
    }
 
-   function renderizarPrevias() {}
-
    return (
-      <Container>
-         {pasta ? (
-            <Row>
-               <Col className="text-center py-5">
-                  <i className="bi bi-folder fs-1"></i>
-                  <h2 className="mb-4">
-                     Edite a pasta: <span className="fst-italic text-decoration-underline text-danger">{pasta.titulo}</span>
-                  </h2>
-                  <hr />
-                  <Form onSubmit={editarPasta} className="text-start mt-5 gap-3 d-flex flex-column ">
+      <Container className="text-center py-5">
+         <i className="bi bi-folder fs-1"></i>
+         <h2 className="mb-4">
+            Edite a pasta: <span className="fst-italic text-decoration-underline text-danger">{pasta.titulo}</span>
+         </h2>
+         <hr />
+         <Form>
+            <Row className="mt-5">
+               <Col className="text-center" lg={7}>
+                  <div onSubmit={editarPasta} className="text-start gap-3 d-flex flex-column ">
                      <Form.Group>
                         <Form.Label className="fw-bold">
                            <i className="bi bi-folder"></i> Nome da pasta:
@@ -62,7 +64,6 @@ const Editar = () => {
                         <Form.Control ref={previasRef} required type="file" multiple accept="image/*" />
                         <div className="d-flex gap-2 flex-wrap mt-3">
                            {/* TODO: Adicionar funcionalidade de remover foto upada */}
-                           {/* TODO: Adidicionar funcionalidade de abrir lightbox ao clicar na imagem */}
                            {pasta.previas.map((v, k) => (
                               <Previa foto={v} key={k} />
                            ))}
@@ -76,16 +77,29 @@ const Editar = () => {
                            <i className="bi bi-x-octagon"></i> Cancelar
                         </Button>
                      </div>
-                  </Form>
+                  </div>
+               </Col>
+               <Col className="text-end">
+                  <Form.Label className="fw-bold">
+                     <i className="bi bi-camera2"></i> Foto de destaque:{" "}
+                  </Form.Label>
+                  <Image src={pasta.foto} ref={fotoDestaque} className="border border-light  rounded" />
+                  <Button as={Form.Label} htmlFor="imgInput" className="w-100 mt-3" variant="light">
+                     <i className="bi bi-plus-circle"></i> Alterar foto
+                  </Button>
+                  <input
+                     onChange={() => {
+                        renderizarPrevia(fotoDestaque, fotoDestaqueInput.current.files[0]);
+                     }}
+                     ref={fotoDestaqueInput}
+                     type="file"
+                     accept="image/*"
+                     hidden
+                     id="imgInput"
+                  />
                </Col>
             </Row>
-         ) : (
-            <Row>
-               <Col className="text-center">
-                  <Alert>Nenhuma pasta foi selecionada</Alert>
-               </Col>
-            </Row>
-         )}
+         </Form>
       </Container>
    );
 };
