@@ -6,12 +6,13 @@ import "./App.css";
 import Router from "./router/Router";
 import i18n from "./i18n/i18n";
 import Provider from "./context/Provider";
+import PreLoader from "./components/PreLoader";
 
 // TODO: Adicionar modal com blur confirmando se o cliente é maior de 18 anos
 createRoot(document.getElementById("root")).render(
    // TODO: Adicionar um componente de preLoader
    <StrictMode>
-      <Suspense fallback={<p>Loading...</p>}>
+      <Suspense  fallback={<PreLoader />}>
          <Provider>
             <Router />
          </Provider>
