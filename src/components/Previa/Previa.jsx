@@ -1,4 +1,4 @@
-import { Button, Image } from "react-bootstrap";
+import { Button, Image, Modal } from "react-bootstrap";
 import styles from "./Previa.module.css";
 import { useState } from "react";
 import LightBox from "../LightBox";
@@ -22,8 +22,14 @@ const Previa = ({ foto, setPrevias }) => {
             >
                <i className="bi bi-trash"></i>
             </Button>
+            <Modal>
+               <Modal.Header closeButton></Modal.Header>
+               <Modal.Body></Modal.Body>
+               <Modal.Footer></Modal.Footer>
+            </Modal>
          </div>
          <LightBox aberto={mostrar} onClose={() => setMostrar(false)} fotos={[foto]} />
+         {/* TODO: Adicionar modal de confirmação de remoção */}
       </div>
    );
 };
