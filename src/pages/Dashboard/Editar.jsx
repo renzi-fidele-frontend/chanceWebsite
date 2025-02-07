@@ -1,12 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
-import { useRef } from "react";
-import styles from "./Dashboard.module.css";
+import { useEffect, useRef, useState } from "react";
 import Previa from "../../components/Previa/Previa";
 import { renderizarPrevia } from "../../utils/renderizarPrevia";
 
 const Editar = () => {
    const pasta = useLocation().state;
+   const [previas, setPrevias] = useState([]);
 
    // Refs do form
    const nomeRef = useRef();
@@ -21,6 +21,10 @@ const Editar = () => {
    function editarPasta(e) {
       e.preventDefault();
    }
+
+   useEffect(() => {
+      setPrevias(pasta.previas);
+   }, []);
 
    return (
       <Container className="text-center py-5">
@@ -63,9 +67,9 @@ const Editar = () => {
                         </Form.Label>
                         <Form.Control ref={previasRef} required type="file" multiple accept="image/*" />
                         <div className="d-flex gap-2 flex-wrap mt-3">
-                           {/* TODO: Adicionar funcionalidade de remover foto upada */}
-                           {pasta.previas.map((v, k) => (
-                              <Previa foto={v} key={k} />
+                           {/* TODO: Adicionar funcionalidade de remover foto upada na lista de previas */}
+                           {previas.map((v, k) => (
+                              <Previa setPrevias={setPrevias} foto={v} key={k} />
                            ))}
                         </div>
                      </Form.Group>
