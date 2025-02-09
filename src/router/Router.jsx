@@ -7,6 +7,7 @@ import ComoComprar from "../pages/ComoComprar/ComoComprar";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import Header from "../components/Header/Header";
 import Editar from "../pages/Dashboard/Editar";
+import AdicionarPasta from "../pages/Dashboard/AdicionarPasta";
 
 const Router = () => {
    return (
@@ -18,6 +19,8 @@ const Router = () => {
                <Route path="/how_to_buy" element={<ComoComprar />} />
                <Route path="/dashboard" element={<Dashboard />} />
                <Route path="/dashboard/editar" element={<Editar />} />
+               <Route path="/dashboard/adicionar_pasta" element={<AdicionarPasta />} />
+
             </Routes>
             <Footer />
             <Notificacao />

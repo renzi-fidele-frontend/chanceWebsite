@@ -7,8 +7,13 @@ const Dashboard = () => {
    return (
       <Container id={styles.ct}>
          <Row>
-            <Col className="text-center py-5">
-               <h2 className="mb-4">Gerenciador do conteúdo do site</h2>
+            <Col className="py-5">
+               <div className="d-flex justify-content-between align-items-center mb-4">
+                  <h2 className=" fw-semibold mb-0">Gerenciador do conteúdo do site</h2>
+                  <Button variant="light" as={Link} to="adicionar_pasta">
+                     <i className="bi bi-plus-circle me-1"></i> Adicionar pasta
+                  </Button>
+               </div>
                <hr />
 
                <Table striped className="mt-4 text-start">

@@ -29,7 +29,6 @@ const Previa = ({ foto, setPrevias }) => {
             </Modal>
          </div>
          <LightBox aberto={mostrar} onClose={() => setMostrar(false)} fotos={[foto]} />
-         {/* TODO: Adicionar modal de confirmação de remoção */}
       </div>
    );
 };
