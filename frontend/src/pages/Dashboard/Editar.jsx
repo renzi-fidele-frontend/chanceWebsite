@@ -65,7 +65,12 @@ const Editar = () => {
                         <Form.Label className="fw-bold">
                            <i className="bi bi-cart"></i> Link de pagamento:
                         </Form.Label>
-                        <Form.Control required ref={linkPagamento} />
+                        <InputGroup>
+                           <InputGroup.Text>
+                              <i className="bi bi-globe"></i>
+                           </InputGroup.Text>
+                           <Form.Control required ref={linkPagamento} defaultValue={pasta.link} />
+                        </InputGroup>
                      </Form.Group>
                      <Form.Group>
                         <Form.Label className="fw-bold">

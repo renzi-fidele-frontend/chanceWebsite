@@ -1,11 +1,9 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { renderizarPrevia } from "../../utils/renderizarPrevia";
 import { Button, Col, Container, Form, Image, InputGroup, Row } from "react-bootstrap";
-import Previa from "../../components/Previa/Previa";
 import { Link } from "react-router-dom";
 
 const AdicionarPasta = () => {
-   const [previas, setPrevias] = useState([]);
    // Refs do form
    const nomeRef = useRef();
    const precoRef = useRef();
@@ -25,18 +23,21 @@ const AdicionarPasta = () => {
          preco: precoRef.current.value,
          descricao: descricaoRef.current.value,
          download: downloadsRef.current.value,
-         previas: previasRef.current.value,
-         foto: fotoDestaqueInput.current.value,
+         previas: previasRef.current.files,
+         foto: fotoDestaqueInput.current.files[0],
          link: linkPagamento.current.value,
       };
+
+      console.log(pasta);
    }
+
    return (
       <Container className="text-center py-5">
          <i className="bi bi-folder fs-1"></i>
          <h2 className="mb-4">Adicione uma nova pasta:</h2>
          <hr />
-         <Form>
-            <Row onSubmit={adicionarPasta} className="mt-5 gx-5">
+         <Form onSubmit={adicionarPasta}>
+            <Row className="mt-5 gx-5">
                <Col className="text-center" lg={7}>
                   <div className="text-start gap-3 d-flex flex-column ">
                      <Form.Group>
@@ -66,8 +67,10 @@ const AdicionarPasta = () => {
                         </Form.Label>
 
                         <InputGroup>
-                        <InputGroup.Text><i className="bi bi-globe"></i></InputGroup.Text>
-                        <Form.Control required ref={linkPagamento} placeholder="Insira o link de pagamento do paypal" />
+                           <InputGroup.Text>
+                              <i className="bi bi-globe"></i>
+                           </InputGroup.Text>
+                           <Form.Control required ref={linkPagamento} placeholder="Insira o link de pagamento do paypal" />
                         </InputGroup>
                      </Form.Group>
                      <Form.Group>
@@ -81,12 +84,6 @@ const AdicionarPasta = () => {
                            <i className="bi bi-camera"></i> Prévias do conteúdo:
                         </Form.Label>
                         <Form.Control ref={previasRef} required type="file" multiple accept="image/*" />
-                        <div className="d-flex gap-2 flex-wrap mt-3">
-                           {/* TODO: Adicionar funcionalidade de remover foto upada na lista de previas */}
-                           {previas?.map((v, k) => (
-                              <Previa setPrevias={setPrevias} foto={v} key={k} />
-                           ))}
-                        </div>
                      </Form.Group>
                      <div className="d-flex gap-3 mt-4">
                         <Button type="submit">
