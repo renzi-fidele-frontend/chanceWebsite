@@ -28,6 +28,8 @@ const AdicionarPasta = () => {
          link: linkPagamento.current.value,
       };
 
+      // TODO: Ao atualizar a pasta, enviar as previas novas para a hospedagem, https://freeimage.host/page/api
+
       console.log(pasta);
    }
 

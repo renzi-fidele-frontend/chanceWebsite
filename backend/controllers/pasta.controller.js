@@ -11,6 +11,10 @@ const apanharPastas = async (req, res) => {
 
 const adicionarPasta = async (req, res) => {
    // TODO: Adicionar funcionalidade de adicionar pasta ao DB
+   const foto = req.files["foto"][0];
+   let previas = req.files["previas"];
+   console.log(foto);
+   console.log(previas);
 };
 
 const removerPasta = (req, res) => {
